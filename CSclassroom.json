@@ -62,9 +62,9 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"exitSceneUrl",
+                 "name":"exitUrl",
                  "type":"string",
-                 "value":"\/CSBuilding.json"
+                 "value":"CSBuilding.json#entryPoint"
                 }],
          "type":"tilelayer",
          "visible":true,
