@@ -18,6 +18,20 @@ WA.onInit().then(() => {
 
     WA.room.onLeaveLayer('clockZone').subscribe(closePopUp)
 
+
+    WA.room.onEnterLayer('WelcomeCSZone').subscribe(() => {
+        currentPopup = WA.ui.openPopup("WelcomePopup","Welcome to Computer Science Department",[]);
+    })
+
+    WA.room.onLeaveLayer('WelcomeCSZone').subscribe(closePopUp);
+
+
+    WA.room.onEnterLayer('WelcomePhysicsZone').subscribe(() => {
+        currentPopup = WA.ui.openPopup("WelcomePopup","Welcome to Physics Department",[]);
+    })
+
+    WA.room.onLeaveLayer('WelcomePhysicsZone').subscribe(closePopUp);
+
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
